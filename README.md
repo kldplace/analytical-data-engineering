@@ -43,5 +43,15 @@ We need in this stage to ingest data from multiple sources into snowflake.
 | Airbyte | Lambda Function |
 |---------| ----------------|
 |Ingest data from **`RDS (PostgreSQL)`**, Which Contains 17 tables refreshed daily with the latest sales data. | Ingest data from **`S3 Bucket`** that stores daily CSV file with the latest inventory data. |
+<hr>
 
+* **AWS Lambda Function**
+
+I Created an inventory table in Snowflake to hold the CSV inventory data that stored in S3 bucket. I Used the Python script <a href="Lambda_function/ingest_inv_to_snowflake.py">`Lambda_function/ingest_inv_to_snowflake.py`</a> to ingest the inventory data from the S3 bucket into Snowflake. For automation I used AWS CloudWatch to automates the execution of the Lambda function every day at 3:00 AM.
+
+* **Airbyte**
+
+![Airbyte Ingestion Process](./Img/airbyte_ingestion_process.png)
+
+The data in RDS is updated daily at 12:00 AM, And I used Airbyte to ingest data from RDS every day at 3:00 AM to ensure availability of the updated data.
 
