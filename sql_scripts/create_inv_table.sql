@@ -1,0 +1,11 @@
+-- Create a database with its schema
+CREATE DATABASE IF NOT EXISTS TPCDS;
+CREATE SCHEMA IF NOT EXISTS TPCDS.RAW;
+
+-- Create (inventory) table
+CREATE TABLE IF NOT EXISTS TPCDS.RAW.inventory (
+    INV_DATE_SK INT,
+    INV_ITEM_SK INT,
+    INV_QUANTITY_ON_HAND INT,
+    INV_WAREHOUSE_SK INT
+);
