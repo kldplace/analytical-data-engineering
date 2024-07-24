@@ -112,5 +112,16 @@ For the actual SQL script used to create this table, please refer to the [Weekly
 
 ![Customer_dim Table](./Img/analytics_weekly_sales_inventory.png)
 
+### 3. Data Viualization:
 
+In this section, we demonstrate the use of Power BI to visualize key metrics and insights derived from our Analytics schema. The dashboard includes two main visualizations:
 
+1. **Items Per Warehouse**:
+* This graph shows the number of items available in each warehouse.
+* It provides an overview of inventory distribution across different warehouse locations.
+
+2. **Global Customer Distribution**:
+* This heat map displays the distribution of customers across the world.
+* It visualizes the density and spread of customers globally, providing insights into market reach and customer demographics.
+
+![Power BI Viualization](./Img/Power_bi_visualization.png)
